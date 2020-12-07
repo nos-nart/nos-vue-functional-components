@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <UserCard :user="user"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import UserCard from './components/user-card.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    UserCard,
+  },
+  data() {
+    return {
+      user: {
+        name: "nos nart",
+        role: "Developer",
+        avatar: "https://randomuser.me/api/portraits/women/26.jpg",
+        bio: "Hello world!"
+      }
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
